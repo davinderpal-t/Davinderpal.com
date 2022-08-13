@@ -5,21 +5,10 @@ const app = express();
 //app.use(express.json({ extended: false }));
 
 //app.use("/api/product", product);
-app.get("/api/product", async (req, res) => {
-    try {
-        res.json({
-            status: 200,
-            message: "Get data has successfully",
-        });
-    } catch (error) {
-        console.error(error);
-        return res.status(500).send("Server error");
-    }
-});
-
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
-    console.log("Listening at: http://localhost:" + PORT);
+app.get('/api', (req, res) => {
+    res.setHeader('Content-Type', 'text/html');
+    res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
+    res.end(`Hello! Go to item: <a href=""></a>`);
 });
 
 module.exports = app;

@@ -5,7 +5,7 @@ const app = express();
 //app.use(express.json({ extended: false }));
 
 //app.use("/api/product", product);
-app.get("/", async (req, res) => {
+app.get("/api/product", async (req, res) => {
     try {
         res.json({
             status: 200,

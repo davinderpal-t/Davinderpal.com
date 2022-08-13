@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const product = require("./api/product");
 
-app.use(express.static("public"));
 //app.use(express.json({ extended: false }));
 
 app.use("/api/product", product);

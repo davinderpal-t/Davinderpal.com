@@ -12,3 +12,8 @@ app.get('/api', (req, res) => {
         "status": x
     });
 });
+
+const PORT = process.env.PORT || 8080; 
+app.listen(PORT, () => {
+
+});

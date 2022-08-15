@@ -1,10 +1,17 @@
+:root {
+    --text: #EEE;
+    --green: #06b297;
+    --green-hover: #0a4d43;
+    --green-active: #062c26;
+}
+
 body {
     padding: 0px;
     background-color: #27282c;
     font-family: arial;
-    color: whitesmoke;
-    text-align: center;
-    text-align: center;
+    color: var(--text);
+    text-align: left;
+    padding-bottom: 5vh;
 }
 
 * {
@@ -13,7 +20,7 @@ body {
 }
 
 nav {
-    color: #EEE;
+    color: var(--text);
     height: 10vh;
     margin-bottom: 10px;
     display: flex;
@@ -41,12 +48,21 @@ header h1 {
 }
 
 nav a {
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     font-weight: bold;
+    background-color: var(--green);
+    color: var(--text);
+    padding: 0.5vh 1.5vw 0.5vh 1.5vw;
+    border-radius: 15px;
+}
+
+nav a:hover {
+    color: var(--green);
+    background-color: var(--green-hover);
 }
 
 a:hover {
-    color: #258173;
+    color: var(--green-hover);
 }
 
 a:focus {
@@ -54,14 +70,58 @@ a:focus {
 }
 
 a:active {
-    color: #0d584d;
+    color: var(--green-active);
 }
 
 a {
     text-decoration: none;
-    color: #06b297;
+    color: var(--green);
 }
 
 .selected {
-    color: #0d584d;
+    color: var(--green-active);
+    background-color: var(--green-hover);
+}
+
+main {
+    width: 80vw;
+    margin: 3vh auto 0 auto;
+}
+
+p {
+    font-size: 150%;
+}
+
+#portrait {
+    width: 15vw;
+    float: left;
+    border-radius: 15%;
+    margin-right: 2.5vw;
+    margin-bottom: 1.5vw;
+}
+
+br {
+    content: "";
+    margin: 2em;
+    display: block;
+    font-size: 24%;
+}
+
+hr {
+    margin: 2vh 0 2vh 0;
+}
+
+blockquote {
+    margin-left: 2vw;
+    margin-top: 2vh;
+    font-size: 125%;
+    border-left: 3px solid var(--green);
+    padding: 1vh 0 1vh 1vw;
+    width: 75%;
+}
+
+blockquote img {
+    width: 5vw;
+    display: block;
+    margin-bottom: 1vh;
 }
